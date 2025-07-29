@@ -1,6 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dashboardLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/dashboard_bg"
+    android:padding="16dp">
 
-</FrameLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <!-- Dashboard Title -->
+    <TextView
+        android:id="@+id/titleDashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Search Field -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search..."
+        android:textColor="@color/white"
+        android:layout_below="@id/titleDashboard"
+        android:layout_marginTop="20dp" />
+
+    <!-- Notifications Label -->
+    <TextView
+        android:id="@+id/notificationsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notifications"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_below="@id/searchBar"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true" />
+
+    <!-- Account Status Label -->
+    <TextView
+        android:id="@+id/accountStatusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Status"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_below="@id/notificationsLabel"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true" />
+
+    <!-- View Profile Button -->
+    <Button
+        android:id="@+id/viewProfileBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Profile"
+        android:layout_below="@id/accountStatusLabel"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true" />
+
+    <!-- Settings Button -->
+    <Button
+        android:id="@+id/settingsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:layout_alignTop="@id/viewProfileBtn"
+        android:layout_toEndOf="@id/viewProfileBtn"
+        android:layout_marginStart="20dp" />
+
+</RelativeLayout>
